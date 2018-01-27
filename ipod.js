@@ -42,7 +42,6 @@ function switchPlay() {
 
   if(document.getElementById("playpause").innerHTML=="pause"){
     document.getElementById("playpause").innerHTML="play_arrow";
-    // setInterval(function(){slider.value = 110;},1000);
   }
   else{
     document.getElementById("playpause").innerHTML="pause";
@@ -57,6 +56,7 @@ function nextSong() {
       num = (i+1)%(tracklist.length);
       }}
       document.getElementById("songname").innerHTML = tracklist[num];
+      time = 0;
 
 }
 
@@ -68,6 +68,7 @@ function prevSong() {
       num = (tracklist.length+i-1)%(tracklist.length);
       }}
       document.getElementById("songname").innerHTML = tracklist[num];
+      time = 0;
 }
 
 function secondsToMs(d) {
@@ -81,27 +82,21 @@ function secondsToMs(d) {
 
 function set() {
   // body...
-  // setInterval(function(){slider.value+=10;},1000);
   time = event.target.value;
-  // document.getElementById("time-elapsed").innerHTML = time;
-  
 }
 
 function timeup(){
-  // sliderval.addEventListener("input",set);
-  
+  if(time == 180){
+    nextSong();
+  }
+
   if(document.getElementById("playpause").innerHTML=="play_arrow"){
     time++;
   }
   document.getElementById("time-elapsed").innerHTML = secondsToMs(time);
   slider.value = time;
-  
-
 }
 
 init();
 setInterval(timeup,1000);
 sliderval.addEventListener("input",set);
-// for(var i=0;i<=180;i++){
-  
-  // };
