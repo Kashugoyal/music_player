@@ -1,4 +1,4 @@
-/* 
+  /* 
 Global classes 
 */
 body {
@@ -34,22 +34,24 @@ body {
   /*the hex code for the grey background of the box*/
   background-color: #d9d9d9;
   /*color of the back arrow*/
-  color: purple;
+  color: #9f5cc4;
   /*following allows the block to be located as per the values defined nby the margin*/
   position: relative;
   /*the gap in pixel the text will have  from the top to be centered*/
-  top: 6px;
+  top: 8px;
   /*left margin*/
   margin-left: 7px;
   /*specifying the border for the box*/
   border: 1px solid white;
   /*size of the back arrow is given by font size since it is a text*/
-  font-size: 25px;
+  /*font-size: 30px;*/
   /*to remove any shadows that may be inherited from parent class*/
   text-shadow: none;
   /*specifications of the size of the box*/
-  width: 60px;
-  height: 30px;
+  width: 50px;
+  size: 15px;
+  /*height: 25px;*/
+
 }
 
 /*to remove the underline from the hyperlink*/
@@ -176,42 +178,168 @@ Songs
 /* 
 Player 
 */
-.player-album-art {
+.player-album-art img{
+   /*defining the wrapper to be the width of the screen*/
+  width: 80%;
+  /*height of the wrapper tile*/
+  /*height: 150px;*/
+  /*its type, same as the albums*/
+  display: block;
+  margin: 30px auto;
+  margin-bottom: 1px;
+   /*determines the cushion space all around*/
+  /*padding-bottom: 0px;*/
 
 }
 
 .player-song-info {
+  text-align: center;
+  /*line-height: 0.3;*/
+  font-weight: bold;
+  color: #555555;
+  font-size: 20px;
+  /*padding-top: 1px;*/
 
 }
 
-#player-song-name {
+.player-song-name {
+  color: #9f5cc4;
+  line-height: 0;
+  font-weight: normal;
+  font-size: 18px;
+  margin-top: -5px;
 
+}
+
+.slider {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 80%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.slider:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+.slider::-webkit-slider-thumb {
+  box-shadow: inset 0.6px 0.6px 1px #0d0d0d, 0px 0px 0.6px #0d0d0d;
+  border: 0.1px solid #000000;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #fefefe;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6.05px;
+}
+
+.slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4.3px;
+  cursor: pointer;
+  box-shadow:inset 0.6px 0.6px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #cccccc;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+.slider:focus::-webkit-slider-runnable-track {
+  background: #cccccc;
+
+  /*outline: none;*/
 }
 
 .volume-bar {
+  display: block;
+  width: 300px;
+  /*justify-content: space-between;*/
+  /*text-align: center;*/
+  margin-left: 25px;
+  /*vertical-align: middle;*/
+  margin-top: 10px;
+
 
 }
 
 .volume-level {
+  display: inline-flex;
+  width: 24px;
+  height: 6px;
+  border: 1px solid black;
+  background-color: transparent;
+  vertical-align: 50%;
+  margin: 1px;
+  /*line-height: 0.1; */
+  /*margin: auto;*/
+
 
 }
 
-.volume-rocker {
+.volume-rocker{
+  display: inline-block;
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+  margin-left: 25px;
+  /*margin-top: -10px;*/
+  /*justify-content: space-between;*/
+}
+.volume-rocker button{
+  /*display: inline-flex;*/
+  border: 2px solid #eeeeee;
+  border-radius: 5px;
+  width: 100px; 
+  height: 20px;
+  margin-top: -10px;
+  background-color: white;
+  font-weight: bolder;
+  /*text-align: center;*/
+  /*vertical-align: 50%;*/
+  /*border-radius: 10%;*/
+}
 
+.volume-rocker button:active{
+  background-color: #e6ccff;
+  outline-width: 2px;
+  outline-color: blue;
+  box-shadow: inset 1px 1px #111;
+}
+
+.volume-rocker button:focus{
+  outline-color: transparent;
 }
 
 .player-controls{
-
+  display: block;
+  width: 150px;
+  justify-content: space-between;
+  margin-left: 25%;
+  margin-top: -18px;
+  /*border: solid black;*/
+  text-align: center;
 }
 
 #player-time {
-
+  display: inline-flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-left: 30px;
+  font-size: 15px;
+  /*margin-top: 10px;*/
 }
 
 #time-elapsed {
-
+  text-align: left;
+  margin-top: -10px;
 }
 
 #time-total{
-
+  text-align: right;
+  margin-top: -10px;
 }
