@@ -1,7 +1,7 @@
 // Create your global variables below:
 var tracklist = ["Let It Happen", "Nangs", "The Moment", "Yes I'm Changing", "Eventually", "Gossip", "The Less I Know The Better", "Past Life", "Disciples", "'Cause I'm A Man"];
 var volLevels = ["vl0","vl1","vl2","vl3","vl4","vl5"];
-var k=3, time = 0;
+var k=3, time = 0, timer=0;
 var slider = document.getElementById("sliderval");
 
 
@@ -10,7 +10,12 @@ function init() {
   for (var i = 0;i<3; i++) {
     document.getElementById(volLevels[i]).style.backgroundColor="#9f5cc4";
   }
-  document.getElementById("time-elapsed").innerHTML = secondsToMs(time);
+  
+  // for(var i=0;document.getElementById("playpause").innerHTML=="play_arrow",i++){
+  //   setInterval(function(){timer+=1;},1000);
+    document.getElementById("time-elapsed").innerHTML = secondsToMs(time);
+  
+  
 
 };
 
@@ -34,11 +39,13 @@ function volDown() {
 
 function switchPlay() {
 	// Your code goes here
-  if(document.getElementById("playpause").innerHTML=="play_arrow"){
-    document.getElementById("playpause").innerHTML="pause";
+
+  if(document.getElementById("playpause").innerHTML=="pause"){
+    document.getElementById("playpause").innerHTML="play_arrow";
+    // setInterval(function(){slider.value = 110;},1000);
   }
   else{
-    document.getElementById("playpause").innerHTML="play_arrow";
+    document.getElementById("playpause").innerHTML="pause";
   }
 }
 
@@ -75,13 +82,25 @@ function secondsToMs(d) {
 function set() {
   // body...
   // setInterval(function(){slider.value+=10;},1000);
-  time = secondsToMs(event.target.value);
-  document.getElementById("time-elapsed").innerHTML = time;
+  time = event.target.value;
+  // document.getElementById("time-elapsed").innerHTML = time;
+  
+}
+
+function timeup(){
+  // sliderval.addEventListener("input",set);
+  
+  if(document.getElementById("playpause").innerHTML=="play_arrow"){
+    time++;
+  }
+  document.getElementById("time-elapsed").innerHTML = secondsToMs(time);
+  slider.value = time;
+  
 
 }
 
 init();
-setInterval(function(){slider.value += 1;},1000);
+setInterval(timeup,1000);
 sliderval.addEventListener("input",set);
 // for(var i=0;i<=180;i++){
   
