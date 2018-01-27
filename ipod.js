@@ -1,13 +1,16 @@
 // Create your global variables below:
 var tracklist = ["Let It Happen", "Nangs", "The Moment", "Yes I'm Changing", "Eventually", "Gossip", "The Less I Know The Better", "Past Life", "Disciples", "'Cause I'm A Man"];
 var volLevels = ["vl0","vl1","vl2","vl3","vl4","vl5"];
-var k=3;
+var k=3, time = 0;
+var slider = document.getElementById("sliderval");
+
 
 function init() {
 	// Your code goes here #9f5cc4
   for (var i = 0;i<3; i++) {
     document.getElementById(volLevels[i]).style.backgroundColor="#9f5cc4";
   }
+  document.getElementById("time-elapsed").innerHTML = secondsToMs(time);
 
 };
 
@@ -69,4 +72,17 @@ function secondsToMs(d) {
     return `0${min}`.slice(-1) + ":" + `00${sec}`.slice(-2);
 }
 
+function set() {
+  // body...
+  // setInterval(function(){slider.value+=10;},1000);
+  time = secondsToMs(event.target.value);
+  document.getElementById("time-elapsed").innerHTML = time;
+
+}
+
 init();
+setInterval(function(){slider.value += 1;},1000);
+sliderval.addEventListener("input",set);
+// for(var i=0;i<=180;i++){
+  
+  // };
