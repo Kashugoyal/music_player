@@ -43,14 +43,9 @@ body {
   margin-left: 7px;
   /*specifying the border for the box*/
   border: 1px solid white;
-  /*size of the back arrow is given by font size since it is a text*/
-  /*font-size: 30px;*/
-  /*to remove any shadows that may be inherited from parent class*/
   text-shadow: none;
-  /*specifications of the size of the box*/
   width: 50px;
   size: 15px;
-  /*height: 25px;*/
 
 }
 
@@ -179,30 +174,21 @@ Songs
 Player 
 */
 .player-album-art img{
-   /*defining the wrapper to be the width of the screen*/
   width: 80%;
-  /*height of the wrapper tile*/
-  /*height: 150px;*/
-  /*its type, same as the albums*/
   display: block;
   margin: 30px auto;
+  /*reducing the gap between the */
   margin-bottom: 1px;
-   /*determines the cushion space all around*/
-  /*padding-bottom: 0px;*/
-
 }
 
 .player-song-info {
   text-align: center;
-  /*line-height: 0.3;*/
   font-weight: bold;
   color: #555555;
   font-size: 20px;
-  /*padding-top: 1px;*/
-
 }
 
-.player-song-name {
+.player-album-name {
   color: #9f5cc4;
   line-height: 0;
   font-weight: normal;
@@ -213,14 +199,15 @@ Player
 
 .slider {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 80%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
+  width: 80%; /* Specific width is required  */
+  background: transparent; 
   margin-top: 10px;
   margin-left: 30px;
 }
 
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  /*we remove the default slider thumb*/
+  -webkit-appearance: none; 
 }
 
 .slider:focus {
@@ -228,10 +215,12 @@ Player
 }
 
 .slider::-webkit-slider-thumb {
+  /*to give the depth/3D effect to the slider thumb*/
   box-shadow: inset 0.6px 0.6px 1px #0d0d0d, 0px 0px 0.6px #0d0d0d;
   border: 0.1px solid #000000;
   height: 16px;
   width: 16px;
+  /*to make the thumb circular*/
   border-radius: 50%;
   background: #fefefe;
   cursor: pointer;
@@ -240,9 +229,11 @@ Player
 }
 
 .slider::-webkit-slider-runnable-track {
+  /*track width*/
   width: 100%;
   height: 4.3px;
   cursor: pointer;
+  /*to give the depth effect to the track*/
   box-shadow:inset 0.6px 0.6px 1px #000000, 0px 0px 1px #0d0d0d;
   background: #cccccc;
   border-radius: 1.3px;
@@ -252,22 +243,19 @@ Player
 .slider:focus::-webkit-slider-runnable-track {
   background: #cccccc;
 
-  /*outline: none;*/
 }
 
 .volume-bar {
   display: block;
   width: 300px;
-  /*justify-content: space-between;*/
-  /*text-align: center;*/
   margin-left: 25px;
-  /*vertical-align: middle;*/
   margin-top: 10px;
 
 
 }
 
 .volume-level {
+  /*to allow all the elemtns in one line and adjustable margins we use inline-flex*/
   display: inline-flex;
   width: 24px;
   height: 6px;
@@ -275,21 +263,18 @@ Player
   background-color: transparent;
   vertical-align: 50%;
   margin: 1px;
-  /*line-height: 0.1; */
-  /*margin: auto;*/
-
-
 }
 
 .volume-rocker{
-  display: inline-block;
+  display: inline-flex;
   width: 100px;
   padding: 5px;
   text-align: center;
   margin-left: 25px;
-  /*margin-top: -10px;*/
-  /*justify-content: space-between;*/
 }
+
+/*properties specific to the volume rocker button*/
+
 .volume-rocker button{
   /*display: inline-flex;*/
   border: 2px solid #eeeeee;
@@ -299,32 +284,33 @@ Player
   margin-top: -10px;
   background-color: white;
   font-weight: bolder;
-  /*text-align: center;*/
-  /*vertical-align: 50%;*/
-  /*border-radius: 10%;*/
 }
 
+/*when the button is pressed*/
 .volume-rocker button:active{
   background-color: #e6ccff;
   outline-width: 2px;
   outline-color: blue;
+  /*depth click effect*/
   box-shadow: inset 1px 1px #111;
 }
 
+/*hover properties*/
 .volume-rocker button:focus{
   outline-color: transparent;
 }
 
+/*player buttons*/
 .player-controls{
   display: block;
   width: 150px;
   justify-content: space-between;
   margin-left: 25%;
   margin-top: -18px;
-  /*border: solid black;*/
   text-align: center;
 }
 
+/*time for the slider bar*/
 #player-time {
   display: flex;
   width: 80%;
@@ -332,7 +318,6 @@ Player
   margin-left: 30px;
   font-size: 15px;
   margin-top: -10px;
-  /*margin-top: 10px;*/
 }
 
 #time-elapsed {
@@ -342,5 +327,4 @@ Player
 
 #time-total{
   text-align: right;
-  /*margin-top: -10px;*/
 }

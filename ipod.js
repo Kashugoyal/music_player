@@ -10,13 +10,7 @@ function init() {
   for (var i = 0;i<3; i++) {
     document.getElementById(volLevels[i]).style.backgroundColor="#9f5cc4";
   }
-  
-  // for(var i=0;document.getElementById("playpause").innerHTML=="play_arrow",i++){
-  //   setInterval(function(){timer+=1;},1000);
     document.getElementById("time-elapsed").innerHTML = secondsToMs(time);
-  
-  
-
 };
 
 function volUp() {
@@ -89,12 +83,12 @@ function timeup(){
   if(time == 180){
     nextSong();
   }
-
-  if(document.getElementById("playpause").innerHTML=="play_arrow"){
-    time++;
-  }
   document.getElementById("time-elapsed").innerHTML = secondsToMs(time);
   slider.value = time;
+
+  if(document.getElementById("playpause").innerHTML=="pause"){
+    time++;
+  }
 }
 
 init();
