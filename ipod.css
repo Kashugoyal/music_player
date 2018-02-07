@@ -14,34 +14,23 @@ body {
   width: 300px;
   margin: 105px 23px;
 }
-/*this is the pink head bar*/
 .head-bar {
   /*to center the text- "music"*/
   text-align:center;
 
   display: block;
-  /*the hex code for pink is #e6ccff*/
   background-color: #e6ccff;
-  /*height of the pink box*/
   height: 45px;
-  /*to add balc shadow to the text*/
   text-shadow: 1px 1px black;
-  /*text color needs to be white*/
   color: white;
 }
 /*used in the file - songs.html*/
 .back-button {
-  /*the hex code for the grey background of the box*/
   background-color: #d9d9d9;
-  /*color of the back arrow*/
   color: #9f5cc4;
-  /*following allows the block to be located as per the values defined nby the margin*/
   position: relative;
-  /*the gap in pixel the text will have  from the top to be centered*/
   top: 8px;
-  /*left margin*/
   margin-left: 7px;
-  /*specifying the border for the box*/
   border: 1px solid white;
   text-shadow: none;
   width: 50px;
@@ -57,40 +46,29 @@ body {
 Albums 
 */
 .albums-album-wrapper {
-  /*the size of each tile which will have the album image*/
   width: 137px;
   height: 200px;
-  /*Inline block will allow albums to fall in same horizontal line owing to space*/
   display: inline-block;
-  /*the gap between albums*/
   padding: 5px;
-  /*define the top margin*/
   margin-top: 20px;
 }
 
 /*fro he images in the album wrappers*/
 .albums-album-art {
-  /*defining image size*/
   width: 100%;
 }
 
 /*properties for the album names*/
 .albums-album-name {
-  /*make the text center aligned within the tile*/
   text-align: center;
-  /*to make the text appear bold*/
   font-weight: bold;
 
 }
 /*properties for the artist name*/
 .albums-artist-name {
-  /*text to be aligned to center, same as the album name*/
   text-align: center;
-  /*italicised font*/
   font-style: oblique;
-  /*to adjust the gap in lines*/
   line-height: 0.01;
-  /*size of the text*/
   font-size: 14px;
 
 }
@@ -99,47 +77,32 @@ Albums
 Songs 
 */
 .songs-info-wrapper {
-  /*defining the wrapper to be the width of the screen*/
   width: 300px;
-  /*height of the wrapper tile*/
   height: 150px;
-  /*its type, same as the albums*/
   display: inline-block;
-  /*determines the cushion space all around*/
   padding: 7px;
 }
 
 .songs-album-art {
-  /*image alignment*/
   float: left;
-  /*image size*/
   height: 100%;
 }
 
 .songs-album-name {
-  /*the alignment of the text within its block*/
   text-align: left;
-  /*making the text bold face*/
   font-weight: bold;
-  /*defingin the size of the text*/
   font-size: 22px;
-  /*cushion space on the left of the text*/
   padding-left: 170px;
-  /*defining the top margin*/
   margin-top: 5px;
 
 }
 
 .songs-artist-name {
-  /*same as aalbum name, alignment is left*/
   text-align: left;
   /*ttext is italicised*/
   font-style: oblique;
-  /*padding is same as album name*/
   padding-left: 170px;
-  /*the gap between the lines in pixels*/
   line-height: 1.5;
-  /*the size of the font*/
   font-size: 17px;
 }
 
@@ -148,11 +111,9 @@ Songs
 }
 
 .songs-album-year {
-  /*this is same tas the album name*/
   text-align: left;
   padding-left: 170px;
   line-height: 2;
-  /*in this case the font size is 10px*/
   font-size: 19px;
 }
 
@@ -161,12 +122,9 @@ Songs
 .songs-list li{
   /*border properties*/
   border: 1px solid #c1c1c1;
-  /*the cushion between the text and the border*/
   padding: 2px;
-  /*margins around each individaul block*/
   margin-right: 10px;
   margin-bottom: 6px;
-  /*size of the text*/
   font-size: 15px;
 }
 
@@ -177,7 +135,6 @@ Player
   width: 80%;
   display: block;
   margin: 30px auto;
-  /*reducing the gap between the */
   margin-bottom: 1px;
 }
 

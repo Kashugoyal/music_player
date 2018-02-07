@@ -7,14 +7,19 @@ var k=3, time = 0;
 var slider = document.getElementById("sliderval");
 
 function init() {
+  
+  // Method 1
+  // for(var i = 0;i<6;i++){
+  //   volLevels[i]="vl"+ i;
+  // }
+
+// Method 2
   for(var i = 0;i<6;i++){
-    volLevels[i]="vl"+ i;
+    volLevels[i]=document.getElementsByClassName("volume-level")[i].id;
   }
 
-  // if we wanna see the output we can log the data
-  // console.log(volLevels);
-  // following loop initializes the volume level
 
+// Filling up the levels
   for (var i = 0;i<3; i++) {
     document.getElementById(volLevels[i]).style.backgroundColor="#9f5cc4";
   }
